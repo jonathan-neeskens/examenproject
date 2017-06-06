@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/jquery.js"></script>
+    <style>
+        /* css goes here */
+        body{
+            margin: 0;
+            transition: all 2s ease;
+            font-family: "Roboto", sans-serif;
+        }
+
+        button{
+            padding: 20px;
+        }
+
+        .content{
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background-color: lightgray;
+            padding: 10%;
+        }
+
+        .layerone_loadOUT{
+            z-index: 10;
+            position: fixed;
+            top: 100%;
+            background-color: dodgerblue;
+            /*background: linear-gradient(269.84deg, #56CCF2 12.19%, #2D9CDB 90.77%);*/
+            height: 100%;
+            width: 100%;
+        }
+
+        .layerone_loadOUT.animated{
+            top: 0%!important;
+            transition: all .5s ease;
+        }
+
+        .layertwo_loadOUT{
+            z-index: 11;
+            position: fixed;
+            top: 100%;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+        .layertwo_loadOUT.animated{
+            top: 0%!important;
+            transition: all .5s ease;
+        }
+
+
+        .layerone_loadIN{
+            z-index: 11;
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+        .layerone_loadIN.animated{
+            top: -100%!important;
+            transition: all .5s ease;
+        }
+
+        .layertwo_loadIN{
+            z-index: 10;
+            position: fixed;
+            top: 0%;
+            background-color: dodgerblue;
+            /*background: linear-gradient(90deg, #27AE60 4.44%, rgba(111, 207, 151, 0.83) 100%);*/
+            height: 100%;
+            width: 100%;
+        }
+
+        .layertwo_loadIN.animated{
+            top: -100%!important;
+            transition: all .5s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>DIT IS PAGINA EEN</h1>
+    <button onclick="transition()">GO TO PAGE TWO</button>
+</div>
+
+<div class="layerone_loadOUT"></div>
+<div class="layertwo_loadOUT"></div>
+
+<div class="layerone_loadIN"></div>
+<div class="layertwo_loadIN"></div>
+<script>
+    window.onload = function () {
+        jQuery(".layerone_loadIN").addClass("animated");
+        setTimeout(function(){
+            jQuery(".layertwo_loadIN").addClass("animated");
+        }, 250);
+    }
+
+    function transition(){
+        jQuery(".layerone_loadOUT").addClass("animated");
+        setTimeout(function(){
+            jQuery(".layertwo_loadOUT").addClass("animated");
+        }, 250);
+
+        setTimeout(function(){
+            location.replace("test2.html");
+        }, 800);
+    }
+</script>
+</body>
+</html>

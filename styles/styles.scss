@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,400,700');
+
+$green-color: #6FCF97;
+$white-color: #FFFFFF;
+$default-font: "Kanit", sans-serif;
+
+$phone_width: 450px;
+$tablet_width: 1200px;
+
+.full_height{
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+label {
+  cursor: text;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: all .3s ease;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 23px;
+  font-weight: 200;
+}
+
+h1{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 80px;
+  margin-bottom: 45px;
+
+
+  &.green_color{
+    color: $green-color;
+  }
+
+  &.white_color{
+    color: $white-color;
+  }
+}
+
+h2{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+
+  b{
+    font-weight: 100;
+  }
+
+  &.green_color{
+    color: $green-color;
+  }
+
+  &.white_color{
+    color: $white-color;
+  }
+}
+
+h3{
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 20px;
+  margin-top: 40px;
+
+  &.green_color{
+    color: $green-color;
+  }
+
+  &.white_color{
+    color: $white-color;
+  }
+}
+
+h4{
+  line-height: 20px;
+
+  &.green_color{
+    color: $green-color;
+  }
+
+  &.white_color{
+    color: $white-color;
+  }
+}
+
+h5{
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  &.green_color{
+    color: $green-color;
+  }
+
+  &.white_color{
+    color: $white-color;
+  }
+}
+
+div.menu-circle {
+  z-index: 100;
+  position: fixed;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+
+  float: right;
+  right: 50px;
+  top: 50px;
+
+  &.green_color{
+    border: 5px solid $green-color;
+  }
+
+  &.white_color{
+    border: 5px solid $white-color;
+  }
+
+  box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, .0);
+
+  transition: all .5s ease;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &.active{
+    box-shadow: none!important;
+    height: 600px;
+    width: 600px;
+    border: none!important;
+    background: $white-color!important;
+    right: -110px;
+    top: -110px;
+  }
+}
+
+body {
+  .align-right{
+    text-align: right;
+
+    @media screen and (max-width: $phone_width) {
+      text-align: left;
+    }
+
+    @media screen and (max-width: $tablet_width) {
+      text-align: left;
+    }
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .onEnter_cover{
+    z-index: 100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $green-color;
+    left: 0;
+    top: 0;
+
+    border-right: 20px solid $white-color;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &.animated{
+      left: -100%;
+      opacity: 0.3;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+
+    }
+  }
+
+  .shoespace{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    a {
+      padding-bottom: 50px!important;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 100;
+
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      &:last-child{
+        margin-left: 25px;
+      }
+    }
+
+    &.show{
+      z-index: 110;
+    }
+
+    img{
+      max-width: 100%;
+      padding-left: 50px;
+
+      @media screen and (max-width: $phone_width) {
+
+      }
+
+      @media screen and (max-width: $tablet_width) {
+
+      }
+    }
+  }
+
+  .height_40{
+    height: 40%;
+    width: 100%;
+  }
+
+  span.error{
+    font-weight: 400;
+    color: indianred;
+    text-transform: uppercase;
+  }
+
+  .menu-content{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: none;
+    text-align: right;
+
+    ul{
+      margin-top: 100px;
+      list-style-type: none;
+
+      li:hover{
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    color: $green-color;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+
+    transition: display 1s ease;
+
+    &.active{
+      display: block!important;
+    }
+  }
+
+  .cover{
+    z-index: 90;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #3C3C3C;
+    opacity: 0.3;
+    display: none;
+
+    transition: all .5s ease;
+
+
+    &.active{
+      display: block!important;
+    }
+  }
+
+  font-family: $default-font;
+
+  input {
+    font-size: 16px;
+  }
+
+  .bg-green {
+    background: $green-color;
+
+    input[type=text], input[type=password], input[type=email], input[type=date], input[type=number] {
+      background: #FFFFFF;
+      color: $green-color;
+    }
+
+    label.active {
+      color: $white-color !important;
+    }
+
+    label {
+      color: $green-color;
+    }
+  }
+
+  label.active {
+    margin-top: -10px;
+    font-size: 15px;
+    margin-left: 0px;
+  }
+
+  .bg-white {
+    background: $white-color;
+
+    input[type=text], input[type=password], input[type=email], input[type=date], input[type=number]{
+      background: $green-color;
+      color: $white-color;
+    }
+
+    label.active {
+      color: $green-color !important;
+    }
+
+    label {
+      color: $white-color;
+    }
+  }
+
+  .brands {
+    &.inactive {
+      opacity: 0.5;
+    }
+
+    &.active {
+      .box:hover {
+        border: 5px solid #38684c;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .box {
+    background-color: #FFFFFF !important;
+    height: 175px;
+    width: 175px;
+    margin-top: 25px;
+    margin-right: 25px;
+    display: inline-block;
+    background-size: contain !important;
+  }
+
+  .wide_wrapper {
+    padding-top: 75px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+      @media screen and (max-width: $phone_width) {
+      }
+
+      @media screen and (max-width: $tablet_width) {
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+        padding-top: 25px!important;
+      }
+    }
+
+  .section {
+    padding: 3em;
+    padding-top: 10%;
+    font-size: 20px !important;
+
+    input {
+      width: 75%;
+      padding: 1em;
+      margin: 0.8em;
+      margin-left: 0 !important;
+      border: none !important;
+      text-transform: uppercase;
+
+      &.button-green {
+        border: 5px solid #6FCF97 !important;
+        background: #FFF;
+        color: $green-color;
+        width: 50%;
+      }
+
+      &.button-white {
+        border: 5px solid #ffffff !important;
+        background: $green-color;
+        color: #FFFFFF;
+        width: 50%;
+      }
+    }
+  }
+
+  input.bit-4 {
+    width: 25% !important;
+    margin-right: 0 !important;
+    border-right: 4px solid $green-color !important;
+
+    &:last-child {
+      border-right: none !important;
+    }
+  }
+}
+
+
+/* Login / registration page */
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f93d0b9e-f7dc-4f49-9e45-55e78ab0a15e" name="Brain Space Center" url="http://braintestlab.nl.transurl.nl">
+        <fileTransfer host="braintestlab.nl.transurl.nl" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
