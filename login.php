@@ -113,17 +113,21 @@ if(isset($_POST['register'])){
         <span class="error"> <?= $register_error_message ?> </span>
     </div>
     <div class="bit-3 bg-green full_height section" style="padding-top: 50px!important;">
-        <div class="menu-circle">
-            <div class="menu-content">
-                <div class="cross-line-1"></div>
-                <div class="cross-line-2"></div>
-                <ul>
-                    <li>Home</li>
-                    <li>My profile</li>
-                    <li>Questions? </li>
-                </ul>
-            </div>
-        </div>
+        <?php
+        $color = "white_color";
+        include ('menu.php');
+        ?>
+<!--        <div class="menu-circle">-->
+<!--            <div class="menu-content">-->
+<!--                <div class="cross-line-1"></div>-->
+<!--                <div class="cross-line-2"></div>-->
+<!--                <ul>-->
+<!--                    <li>Home</li>-->
+<!--                    <li>My profile</li>-->
+<!--                    <li>Questions? </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 
     <div class="onEnter_cover"></div>
@@ -160,14 +164,15 @@ if(isset($_POST['register'])){
             }
         });
 
-        jQuery('.menu-circle').click(function() {
-            jQuery(".cover").toggleClass("active");
-            jQuery(".menu-circle").toggleClass("active");
-
-            setTimeout(function(){
-                jQuery(".menu-content").addClass("active");
-            }, 750);
-        });
+//        jQuery('.menu-circle').click(function() {
+//            jQuery(".cover").toggleClass("active");
+//            jQuery(".menu-circle").toggleClass("active");
+//
+//            setTimeout(function(){
+//                jQuery(".menu-content").addClass("active");
+//            }, 750);
+//        });
 
     </script>
+<?php include('footer.php') ?>
 </body>

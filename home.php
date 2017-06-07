@@ -66,7 +66,7 @@ elseif(checklogin() == true){
     </div>
 <?php endforeach; ?>
 
-<div class="onEnter_cover"></div>
+<?php include('cover.php'); ?>
 
 <script>
 
@@ -81,48 +81,14 @@ elseif(checklogin() == true){
         }, 400);
     }
 
-    var message = "Come back plz ♡";
-    var original;
-
-    jQuery(window).focus(function() {
-        if (original) {
-            document.title = original;
-        }
-    }).blur(function() {
-        var title = jQuery('title').text();
-        if (title != message) {
-            original = title;
-        }
-        document.title = message;
-    });
-
-    jQuery('.menu-circle').click(function() {
-        jQuery(".cover").addClass("active");
-        jQuery(".menu-circle").addClass("active");
-        jQuery(".menu-content").addClass("active");
-
-        jQuery('.cover').click(function () {
-            disableMenu()
-        });
-    });
-
-    jQuery('.disableMenu').click(function() {
-        disableMenu();
-    });
-
-
-    function disableMenu(){
-        jQuery(".cover").removeClass("active");
-        jQuery(".menu-circle").removeClass("active");
-        jQuery(".menu-content").removeClass("active");
-    }
-
     jQuery('.addrun').click(function() {
         alert('voeg nieuwe run toe');
     });
 
 
 </script>
+
+    <?php include('footer.php') ?>
 </body>
 
 <?php

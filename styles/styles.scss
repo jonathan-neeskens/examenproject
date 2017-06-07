@@ -151,6 +151,33 @@ div.menu-circle {
 }
 
 body {
+  input {
+    width: 75%;
+    padding: 1em;
+    margin: 0.8em;
+    margin-left: 0 !important;
+    border: none !important;
+    text-transform: uppercase;
+
+    &.w25{
+      width: 25%!important;
+    }
+
+    &.button-green {
+      border: 5px solid #6FCF97 !important;
+      background: #FFF;
+      color: $green-color;
+      width: 50%;
+    }
+
+    &.button-white {
+      border: 5px solid #ffffff !important;
+      background: $green-color;
+      color: #FFFFFF;
+      width: 50%;
+    }
+  }
+
   &.bg-green {
     background: $green-color;
   }
@@ -182,17 +209,24 @@ body {
 
     border-right: 20px solid $white-color;
 
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    img{
+      margin-left: 50%;
+      margin-top: 25%;
+      height: 100px;
+      width: 100px;
+    }
 
     &.animated{
       left: -100%;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
     }
   }
 
@@ -372,6 +406,14 @@ body {
     background-size: contain !important;
     text-align: center;
 
+    a{
+      float: left;
+      margin-left: 7px;
+      font-size: 25px;
+      i{
+        color: #000000;
+      }
+    }
 
     @media screen and (max-width: $phone_width) {
       height: 20%;
@@ -486,35 +528,13 @@ body {
     padding: 3em;
     padding-top: 10%;
     font-size: 20px !important;
-
-    input {
-      width: 75%;
-      padding: 1em;
-      margin: 0.8em;
-      margin-left: 0 !important;
-      border: none !important;
-      text-transform: uppercase;
-
-      &.button-green {
-        border: 5px solid #6FCF97 !important;
-        background: #FFF;
-        color: $green-color;
-        width: 50%;
-      }
-
-      &.button-white {
-        border: 5px solid #ffffff !important;
-        background: $green-color;
-        color: #FFFFFF;
-        width: 50%;
-      }
-    }
   }
 
   input.bit-4 {
     width: 25% !important;
     margin-right: 0 !important;
     border-right: 4px solid $green-color !important;
+    padding: 1em;
 
     &:last-child {
       border-right: none !important;

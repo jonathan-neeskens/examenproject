@@ -28,7 +28,7 @@ $brandID = $_GET['brandID'];
                 foreach($brandArray as $singlebrand) :
                     ?>
 
-                    <div alt="<?= $singlebrand[1] ?>" class="brand box active" style="background: url('img/logos/<?= $singlebrand[2] ?>')"> <a href="register_step1.php">  </a></div>
+                    <div alt="<?= $singlebrand[1] ?>" class="brand box active" style="background: url('img/logos/<?= $singlebrand[2] ?>')"> <a href="register_step1.php"> <i class="fa fa-times"></i> </a></div>
 
                     <?php endforeach; ?>
             <?php endif; ?>
@@ -54,10 +54,20 @@ $brandID = $_GET['brandID'];
             <?php endif; ?>
         </div>
     </div>
-
+    <?php include('cover.php'); ?>
 <script>
+    window.onload = function() {
+        setTimeout(function(){
+            jQuery(".onEnter_cover").addClass("animated");
+        }, 400);
+    }
+
     function chooseBrand(brandID) {
         window.location.href = "?brandID=" + brandID;
+    }
+
+    function chooseModel(modelID) {
+        window.location.href = "register_step2.php?modelID=" + modelID;
     }
 </script>
 </body>
