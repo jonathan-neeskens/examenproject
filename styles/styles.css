@@ -99,6 +99,13 @@ div.menu-circle {
 
 body {
   font-family: "Kanit", sans-serif; }
+  body .label2 {
+    position: relative;
+    left: -20px !important; }
+  body .feet {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    max-width: 100%; }
   body input {
     width: 75%;
     padding: 1em;
@@ -107,17 +114,38 @@ body {
     border: none !important;
     text-transform: uppercase; }
     body input.w25 {
-      width: 25% !important; }
+      width: 25%; }
+      @media screen and (max-width: 450px) {
+        body input.w25 {
+          width: 100%; } }
+      @media screen and (max-width: 1200px) {
+        body input.w25 {
+          width: 50%; } }
+    body input.w10 {
+      width: 10% !important;
+      margin-right: -50px; }
+      @media screen and (max-width: 450px) {
+        body input.w10 {
+          width: 100% !important; } }
+      @media screen and (max-width: 1200px) {
+        body input.w10 {
+          width: 30% !important; } }
     body input.button-green {
       border: 5px solid #6FCF97 !important;
       background: #FFF;
       color: #6FCF97;
       width: 50%; }
+      @media screen and (max-width: 1200px) {
+        body input.button-green {
+          width: 75% !important; } }
     body input.button-white {
       border: 5px solid #ffffff !important;
       background: #6FCF97;
       color: #FFFFFF;
       width: 50%; }
+      @media screen and (max-width: 1200px) {
+        body input.button-white {
+          width: 75% !important; } }
   body.bg-green {
     background: #6FCF97; }
   body .align-right {

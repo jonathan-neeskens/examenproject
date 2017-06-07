@@ -157,3 +157,9 @@ function getModelsByBrandID($brandID){
 
     return $array_result;
 }
+
+//Registreert een gebruiker. Is de laatste stap in het registratieproces. Wordt aangeroepen met een array met persoonlijke gegevens, het Id van het gekozen schoenmodel, en een array met data over de voeten.
+function registerUser($arrUserData, $modelID, $arrFeetData){
+    global $link;
+
+}

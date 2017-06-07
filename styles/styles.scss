@@ -151,6 +151,17 @@ div.menu-circle {
 }
 
 body {
+  .label2{
+    position: relative;
+    left: -20px!important;
+  }
+
+  .feet{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    max-width: 100%;
+  }
+
   input {
     width: 75%;
     padding: 1em;
@@ -160,7 +171,28 @@ body {
     text-transform: uppercase;
 
     &.w25{
-      width: 25%!important;
+      width: 25%;
+
+      @media screen and (max-width: $phone_width) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: $tablet_width) {
+        width: 50%;
+      }
+    }
+
+    &.w10{
+      width: 10%!important;
+      margin-right: -50px;
+
+      @media screen and (max-width: $phone_width) {
+        width: 100%!important;
+      }
+
+      @media screen and (max-width: $tablet_width) {
+        width: 30%!important;
+      }
     }
 
     &.button-green {
@@ -168,6 +200,10 @@ body {
       background: #FFF;
       color: $green-color;
       width: 50%;
+
+      @media screen and (max-width: $tablet_width) {
+        width: 75%!important;
+      }
     }
 
     &.button-white {
@@ -175,6 +211,10 @@ body {
       background: $green-color;
       color: #FFFFFF;
       width: 50%;
+
+      @media screen and (max-width: $tablet_width) {
+        width: 75%!important;
+      }
     }
   }
 
