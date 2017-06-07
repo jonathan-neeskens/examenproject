@@ -47,7 +47,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 200;
   font-size: 20px;
-  margin-top: 40px; }
+  margin-top: 100px; }
   h3.green_color {
     color: #6FCF97; }
   h3.white_color {
@@ -71,7 +71,7 @@ h5 {
     color: #FFFFFF; }
 
 div.menu-circle {
-  z-index: 100;
+  z-index: 192;
   position: fixed;
   height: 75px;
   width: 75px;
@@ -99,6 +99,8 @@ div.menu-circle {
 
 body {
   font-family: "Kanit", sans-serif; }
+  body.bg-green {
+    background: #6FCF97; }
   body .align-right {
     text-align: right; }
     @media screen and (max-width: 450px) {
@@ -110,7 +112,7 @@ body {
   body .hide {
     display: none; }
   body .onEnter_cover {
-    z-index: 100;
+    z-index: 200;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -124,7 +126,6 @@ body {
     transition: all 0.3s ease; }
     body .onEnter_cover.animated {
       left: -100%;
-      opacity: 0.3;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
@@ -159,22 +160,25 @@ body {
     position: fixed;
     top: 50px;
     right: 50px;
-    display: none;
     text-align: right;
     color: #6FCF97;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 0px;
     font-weight: 700;
-    transition: display 1s ease; }
+    transition: font-size .5s ease; }
     body .menu-content ul {
       margin-top: 100px;
       list-style-type: none; }
       body .menu-content ul li:hover {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25); }
+      body .menu-content ul a {
+        text-decoration: none;
+        color: #6FCF97; }
     body .menu-content.active {
-      display: block !important; }
+      font-size: 40px;
+      transition: font-size .5s ease; }
   body .cover {
-    z-index: 90;
+    z-index: 190;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -208,19 +212,68 @@ body {
       color: #6FCF97 !important; }
     body .bg-white label {
       color: #FFFFFF; }
+  body .brands .box {
+    background-color: #FFFFFF !important;
+    padding: 0px 0px !important; }
   body .brands.inactive {
     opacity: 0.5; }
-  body .brands.active .box:hover {
-    border: 5px solid #38684c;
-    cursor: pointer; }
+  body .brands.active {
+    transition: all .5s ease; }
+    body .brands.active .box:hover {
+      border: 5px solid #38684c;
+      cursor: pointer; }
   body .box {
-    background-color: #FFFFFF !important;
     height: 175px;
     width: 175px;
     margin-top: 25px;
     margin-right: 25px;
-    display: inline-block;
-    background-size: contain !important; }
+    display: inline-table;
+    background-size: contain !important;
+    text-align: center; }
+    @media screen and (max-width: 450px) {
+      body .box {
+        height: 20%;
+        width: auto; } }
+    @media screen and (max-width: 1200px) {
+      body .box {
+        height: 150px;
+        width: 150px; } }
+    body .box.active {
+      border: 5px solid #000000 !important;
+      cursor: default !important; }
+    body .box.inactive {
+      background: #ffffff;
+      opacity: .5; }
+  body .model.box {
+    background: #6FCF97;
+    border: 5px solid #ffffff; }
+  body .model .img {
+    height: 70%;
+    background-color: #FFFFFF !important;
+    background-size: 70% !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important; }
+  body .model .modelName {
+    line-height: 30%;
+    padding-top: .3em; }
+  body .model .modelName span {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle; }
+  body .model:hover {
+    transition: all .3s ease; }
+    body .model:hover .img {
+      background-color: #6FCF97 !important; }
+    body .model:hover .modelName span {
+      color: #6FCF97; }
+    body .model:hover.box {
+      background: #FFFFFF; }
   body .wide_wrapper {
     padding-top: 75px;
     padding-left: 10%;
@@ -230,6 +283,22 @@ body {
         padding-left: 25px !important;
         padding-right: 25px !important;
         padding-top: 25px !important; } }
+  body .small_wrapper {
+    padding-top: 100px;
+    padding-left: 20%;
+    padding-right: 35%; }
+    @media screen and (max-width: 450px) {
+      body .small_wrapper {
+        padding-right: 0px !important; } }
+    @media screen and (max-width: 1200px) {
+      body .small_wrapper {
+        padding-left: 25px !important;
+        padding-right: 25px;
+        padding-top: 25px !important; } }
+    @media screen and (max-width: 1750px) {
+      body .small_wrapper {
+        padding-left: 100px;
+        padding-right: 100px; } }
   body .section {
     padding: 3em;
     padding-top: 10%;

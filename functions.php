@@ -68,7 +68,7 @@ function getShoeByUserID($userID){
     return($array_result);
 }
 
-//Roep deze functie aan met een datum en krijg terug hoe lang die datum geleden is.
+//Roep deze functie aan met een datum en krijg terug hoe lang die datum geleden is, in leesbaar engels.
 function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
     $ago = new DateTime($datetime);
@@ -132,7 +132,28 @@ function getBrands(){
     return $array_result;
 }
 
+//Haalt alle gegevens van één merk op aan de hand van het ID. Wordt aangeroepen met brandID, geeft een array met data van het merk terug.
+function getBrandByID($brandID){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM shoe_brands WHERE brandID = $brandID");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
+}
+
 //Haalt alle modellen op die bij een merk horen. Wordt gebruikt bij de tweede stap van het registratieproces. Wordt aangeroepen met brandID en geeft een array met alle modellen terug.
 function getModelsByBrandID($brandID){
     global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM shoe_models WHERE brandID = $brandID");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
 }

@@ -6,6 +6,7 @@ $default-font: "Kanit", sans-serif;
 
 $phone_width: 450px;
 $tablet_width: 1200px;
+$regular_screen: 1750px;
 
 .full_height{
   height: 100%;
@@ -72,7 +73,7 @@ h3{
   text-transform: uppercase;
   font-weight: 200;
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 100px;
 
   &.green_color{
     color: $green-color;
@@ -111,7 +112,7 @@ h5{
 }
 
 div.menu-circle {
-  z-index: 100;
+  z-index: 192;
   position: fixed;
   height: 75px;
   width: 75px;
@@ -150,6 +151,10 @@ div.menu-circle {
 }
 
 body {
+  &.bg-green {
+    background: $green-color;
+  }
+
   .align-right{
     text-align: right;
 
@@ -167,7 +172,7 @@ body {
   }
 
   .onEnter_cover{
-    z-index: 100;
+    z-index: 200;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -184,12 +189,10 @@ body {
 
     &.animated{
       left: -100%;
-      opacity: 0.3;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
-
     }
   }
 
@@ -247,7 +250,7 @@ body {
     position: fixed;
     top: 50px;
     right: 50px;
-    display: none;
+    //display: none;
     text-align: right;
 
     ul{
@@ -257,22 +260,28 @@ body {
       li:hover{
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
       }
+
+      a{
+        text-decoration: none;
+        color: $green-color;
+      }
     }
 
     color: $green-color;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 0px;
     font-weight: 700;
 
-    transition: display 1s ease;
+    transition: font-size .5s ease;
 
     &.active{
-      display: block!important;
+      font-size: 40px;
+      transition: font-size .5s ease;
     }
   }
 
   .cover{
-    z-index: 90;
+    z-index: 190;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -335,11 +344,18 @@ body {
   }
 
   .brands {
+    .box{
+      background-color: #FFFFFF!important;
+      padding: 0px 0px!important;
+    }
+
     &.inactive {
       opacity: 0.5;
     }
 
     &.active {
+      transition: all .5s ease;
+
       .box:hover {
         border: 5px solid #38684c;
         cursor: pointer;
@@ -348,13 +364,82 @@ body {
   }
 
   .box {
-    background-color: #FFFFFF !important;
     height: 175px;
     width: 175px;
     margin-top: 25px;
     margin-right: 25px;
-    display: inline-block;
+    display: inline-table;
     background-size: contain !important;
+    text-align: center;
+
+
+    @media screen and (max-width: $phone_width) {
+      height: 20%;
+      width: auto;
+    }
+
+    @media screen and (max-width: $tablet_width) {
+      height: 150px;
+      width: 150px;
+    }
+
+    &.active{
+      border: 5px solid #000000!important;
+      cursor: default!important;
+    }
+
+    &.inactive{
+      background: #ffffff;
+      opacity: .5;
+    }
+  }
+
+  .model{
+    &.box{
+      background: $green-color;
+      border: 5px solid #ffffff;
+    }
+
+    .img{
+      height: 70%;
+      background-color: $white-color!important;
+      background-size: 70%!important;
+      background-repeat: no-repeat!important; 
+      background-position: 50%!important;
+    }
+
+    .modelName{
+      line-height: 30%;
+      padding-top: .3em;
+    }
+
+    .modelName span{
+      text-transform: uppercase;
+      color: $white-color;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    &:hover{
+      transition: all .3s ease;
+
+      .img{
+        background-color: $green-color!important;
+      }
+
+      .modelName span{
+        color: $green-color;
+      }
+
+      &.box{
+        background: $white-color;
+      }
+    }
   }
 
   .wide_wrapper {
@@ -370,7 +455,32 @@ body {
         padding-right: 25px!important;
         padding-top: 25px!important;
       }
+
+      @media screen and (max-width: $regular_screen) {
+
+      }
     }
+
+  .small_wrapper {
+    padding-top: 100px;
+    padding-left: 20%;
+    padding-right: 35%;
+
+    @media screen and (max-width: $phone_width) {
+      padding-right: 0px!important;
+    }
+
+    @media screen and (max-width: $tablet_width) {
+      padding-left: 25px!important;
+      padding-right: 25px;
+      padding-top: 25px!important;
+    }
+
+    @media screen and (max-width: $regular_screen) {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
 
   .section {
     padding: 3em;

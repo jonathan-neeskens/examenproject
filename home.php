@@ -1,4 +1,4 @@
-    <?php
+<?php
 session_start();
 $pagetitle = "Home";
 
@@ -21,19 +21,10 @@ elseif(checklogin() == true){
 
 <title>Welcome, <?= getName() ?></title>
     <body>
+    <div class="cover"></div>
 
 <div class="bg-white wide_wrapper">
-    <div class="menu-circle green_color" style="margin-right: 10%; margin-top: 75px;">
-        <div class="menu-content">
-            <div class="cross-line-1"></div>
-            <div class="cross-line-2"></div>
-            <ul>
-                <li>Home</li>
-                <li>My profile</li>
-                <li>Questions? </li>
-            </ul>
-        </div>
-    </div>
+    <?php include ('menu.php') ?>
     <div class="bit-66">
         <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
         <h3 class="green_color">We've missed you, hero.</h3>
@@ -75,35 +66,19 @@ elseif(checklogin() == true){
     </div>
 <?php endforeach; ?>
 
-<!--<div class="onEnter_cover"></div>-->
+<div class="onEnter_cover"></div>
 
 <script>
 
     function switchShoe(toShow, toHide) {
         jQuery(toShow).addClass("show");
         jQuery(toHide).removeClass("show");
-
-//        alert("Te verbergen class (huidige) = " + toHide + ". Class die weergeven moet worden: " + toShow);
     }
 
     window.onload = function() {
         setTimeout(function(){
             jQuery(".onEnter_cover").addClass("animated");
         }, 400);
-
-        // Check if localStorage is available (IE8+) and make sure that the visited flag is not already set.
-//        if(typeof window.localStorage !== "undefined" && !localStorage.getItem('visited')) {
-//            // Set visited flag in local storage
-//            localStorage.setItem('visited', true);
-//            // Alert the user
-//            setTimeout(function(){
-//                jQuery(".onEnter_cover").addClass("animated");
-//            }, 400);
-//        }
-//
-//        else{
-//            jQuery(".onEnter_cover").addClass("hide");
-//        }
     }
 
     var message = "Come back plz ♡";
@@ -121,6 +96,30 @@ elseif(checklogin() == true){
         document.title = message;
     });
 
+    jQuery('.menu-circle').click(function() {
+        jQuery(".cover").addClass("active");
+        jQuery(".menu-circle").addClass("active");
+        jQuery(".menu-content").addClass("active");
+
+        jQuery('.cover').click(function () {
+            disableMenu()
+        });
+    });
+
+    jQuery('.disableMenu').click(function() {
+        disableMenu();
+    });
+
+
+    function disableMenu(){
+        jQuery(".cover").removeClass("active");
+        jQuery(".menu-circle").removeClass("active");
+        jQuery(".menu-content").removeClass("active");
+    }
+
+    jQuery('.addrun').click(function() {
+        alert('voeg nieuwe run toe');
+    });
 
 
 </script>

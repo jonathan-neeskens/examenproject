@@ -129,7 +129,7 @@ if(isset($_POST['register'])){
     <div class="onEnter_cover"></div>
 
     <script>
-
+        
         window.onload = function() {
             // Check if localStorage is available (IE8+) and make sure that the visited flag is not already set.
             if(typeof window.localStorage !== "undefined" && !localStorage.getItem('visited')) {

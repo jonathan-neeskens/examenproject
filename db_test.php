@@ -28,7 +28,7 @@ $aantal = mysqli_num_rows($result);
 
         echo $_SESSION['userName'];
         echo "er is iemand met deze gegevens";
-//        return(true);
+//        return(true);xw
     }
 
     else{
