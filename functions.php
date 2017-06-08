@@ -165,16 +165,20 @@ function registerUser($arrUserData, $modelID, $arrFeetData){
     $today = date("Y-m-d");
 
     $query_1 = mysqli_query($link, "INSERT INTO users VALUES ('', '$arrUserData[0]', '$arrUserData[1]', '$arrUserData[2]', '$arrUserData[3]', '$arrUserData[6]-$arrUserData[5]-$arrUserData[4]')");
-    $query_2 = mysqli_query($link, "INSERT INTO user_shoe VALUES (LAST_INSERT_ID(), '$modelID', '$today', '100', '0')");
     $query_4 = mysqli_query($link, "SELECT * from users WHERE userID = LAST_INSERT_ID()");
-    $query_3 = mysqli_query($link, "INSERT INTO profile VALUES ('', LAST_INSERT_ID(), '$arrFeetData[0]', '$arrFeetData[1]', '$arrFeetData[2]', '$arrFeetData[3]', '$arrFeetData[4]', '$arrFeetData[5]', '$arrFeetData[6]')");
-
+    $query_2 = mysqli_query($link, "INSERT INTO user_shoe VALUES ('', LAST_INSERT_ID(), '$modelID', '$today', '100', '0')");
     $row = mysqli_fetch_array($query_4);
+    $query_3 = mysqli_query($link, "INSERT INTO profile VALUES ('', $row[userID], '$arrFeetData[0]', '$arrFeetData[1]', '$arrFeetData[2]', '$arrFeetData[3]', '$arrFeetData[4]', '$arrFeetData[5]', '$arrFeetData[6]')");
+
+
     $_SESSION['userID'] = $row['userID'];
     $_SESSION['user']['login'] = 1;
     header('location: home.php');
 }
 
+//Voegt een run toe en past de status van de schoen aan.
 function addRun($arrData){
+    global $link;
 
+    $query_4 = mysqli_query($link, "UPDATE user_shoe DA");
 }

@@ -30,7 +30,24 @@ elseif(checklogin() == true){
     include ('menu.php') ?>
     <div class="bit-66">
         <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
-        <h3 class="green_color no-margin">We've missed you, hero.</h3>
+        <h3 class="green_color no-margin">We've missed you, hero.</h3> <br><br>
+        <h4 class="green_color"> latest runs</h4>
+        <div class="latest-runs">
+            <div class="bit-4 date">April 11th, 2017</div>
+            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
+            <div class="bit-2 wear">0.2 % wear</div>
+        </div>
+        <div class="latest-runs">
+            <div class="bit-4 date">April 11th, 2017</div>
+            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
+            <div class="bit-2 wear">0.2 % wear</div>
+        </div>
+        <div class="latest-runs">
+            <div class="bit-4 date">April 11th, 2017</div>
+            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
+            <div class="bit-2 wear">0.2 % wear</div>
+        </div>
+        <input type="submit" onclick="showPopUp()" class="button-green" value="add new run">
     </div>
     <div class="bit-3"> </div>
 </div>
@@ -89,9 +106,13 @@ elseif(checklogin() == true){
     jQuery('.addrun').click(function() {
         hideMenu();
 
+        showPopUp();
+    });
+
+    function showPopUp(){
         jQuery('.popup_addrun').addClass('active');
         jQuery(".cover").addClass("active");
-    });
+    }
 
     function hideMenu(){
         jQuery(".menu-circle").removeClass("active");

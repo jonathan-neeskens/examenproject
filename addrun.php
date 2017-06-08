@@ -5,12 +5,12 @@
         addRun($arrData);
     }
 
-    include 'head.php';
+//    include 'head.php';
 ?>
 
-<body class="bg-green">
+<!--<body class="bg-green">-->
 
-    <div class="popup_addrun bg-white active">
+    <div class="popup_addrun bg-white">
         <a onclick="disableCover()"> <i class="fa fa-times"></i></a>
         <h2> Add a new run </h2>
         <form method="post" action="#">
@@ -62,5 +62,5 @@
         }
 
     </script>
-<?php include 'footer.php'; ?>
-</body>
+<?php //include 'footer.php'; ?>
+<!--</body>-->
