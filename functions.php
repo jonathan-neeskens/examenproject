@@ -171,6 +171,7 @@ function registerUser($arrUserData, $modelID, $arrFeetData){
 
     $row = mysqli_fetch_array($query_4);
     $_SESSION['userID'] = $row['userID'];
+    $_SESSION['user']['login'] = 1;
     header('location: home.php');
 
 }

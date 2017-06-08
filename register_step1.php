@@ -44,7 +44,7 @@ $brandID = $_GET['brandID'];
                 $modelsArray = getModelsByBrandID($brandID);
                 foreach($modelsArray as $model) :
                     ?>
-                <div alt="<?= $model[2] ?>" class="model box" onclick="chooseModel('<?= $model[1] ?>')">
+                <div alt="<?= $model[2] ?>" class="model box" onclick="chooseModel('<?= $model[0] ?>')">
                     <div class="img" style='background: url("img/models/<?= $model[3] ?>")'> </div>
                     <div class="modelName">
                         <span><?= $model[2] ?></span>

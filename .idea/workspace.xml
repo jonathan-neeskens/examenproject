@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b38d2c4-233e-4b8c-8cc1-29360f95f165" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/head.php" afterPath="$PROJECT_DIR$/head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu.php" afterPath="$PROJECT_DIR$/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register_step2.php" afterPath="$PROJECT_DIR$/register_step2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.css" afterPath="$PROJECT_DIR$/styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.css.map" afterPath="$PROJECT_DIR$/styles/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.scss" afterPath="$PROJECT_DIR$/styles/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register_step1.php" afterPath="$PROJECT_DIR$/register_step1.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,7 +62,7 @@
       <file leaf-file-name="register_step2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register_step2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
+            <state relative-caret-position="630">
               <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
                 <marker date="1496906977000" expanded="true" signature="952:2268" ph="..." />
@@ -78,25 +71,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register_step1.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/register_step1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+            <state relative-caret-position="892">
+              <caret line="157" column="25" lean-forward="true" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
               <folding>
-                <marker date="1496913138000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
-                <marker date="1496913138000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
-                <marker date="1496913138000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
-                <marker date="1496913138000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
-                <marker date="1496913138000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
-                <marker date="1496913138000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
-                <marker date="1496913138000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
-                <marker date="1496913138000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
-                <marker date="1496913138000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
-                <marker date="1496913138000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
-                <marker date="1496913138000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
-                <marker date="1496913138000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
-                <marker date="1496913138000" expanded="true" signature="5914:5916" ph="INSERT INTO users... " />
+                <marker date="1496913508000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
+                <marker date="1496913508000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
+                <marker date="1496913508000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
+                <marker date="1496913508000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
+                <marker date="1496913508000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
+                <marker date="1496913508000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
+                <marker date="1496913508000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
+                <marker date="1496913508000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
+                <marker date="1496913508000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
+                <marker date="1496913508000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
+                <marker date="1496913508000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
+                <marker date="1496913508000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
+                <marker date="1496913508000" expanded="true" signature="5950:5952" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -171,7 +176,6 @@
         <option value="$PROJECT_DIR$/styles/lemonade.css" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/js/custom_js.js" />
-        <option value="$PROJECT_DIR$/register_step1.php" />
         <option value="$PROJECT_DIR$/cover.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/home.php" />
@@ -180,6 +184,7 @@
         <option value="$PROJECT_DIR$/register_step2.php" />
         <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/register_step1.php" />
       </list>
     </option>
   </component>
@@ -335,7 +340,7 @@
       <updated>1496751098918</updated>
       <workItem from="1496751100035" duration="4867000" />
       <workItem from="1496813356736" duration="19947000" />
-      <workItem from="1496903327067" duration="5957000" />
+      <workItem from="1496903327067" duration="6832000" />
     </task>
     <task id="LOCAL-00001" summary="Commit for adding fontawesome">
       <created>1496838121398</created>
@@ -348,7 +353,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30771000" />
+    <option name="totallyTimeSpent" value="31646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1016" y="23" width="1544" height="1412" extended-state="0" />
@@ -460,19 +465,19 @@
         <state relative-caret-position="2430">
           <caret line="162" column="17" lean-forward="true" selection-start-line="162" selection-start-column="17" selection-end-line="162" selection-end-column="17" />
           <folding>
-            <marker date="1496913138000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
-            <marker date="1496913138000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
-            <marker date="1496913138000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
-            <marker date="1496913138000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
-            <marker date="1496913138000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
-            <marker date="1496913138000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
-            <marker date="1496913138000" expanded="true" signature="5914:5916" ph="INSERT INTO users... " />
+            <marker date="1496913508000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
+            <marker date="1496913508000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
+            <marker date="1496913508000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
+            <marker date="1496913508000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
+            <marker date="1496913508000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
+            <marker date="1496913508000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
+            <marker date="1496913508000" expanded="true" signature="5950:5952" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
@@ -612,14 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register_step1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -659,16 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register_step2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding>
-            <marker date="1496906977000" expanded="true" signature="952:2268" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/custom_js.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -701,24 +688,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/register_step2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <marker date="1496906977000" expanded="true" signature="952:2268" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+        <state relative-caret-position="892">
+          <caret line="157" column="25" lean-forward="true" selection-start-line="157" selection-start-column="25" selection-end-line="157" selection-end-column="25" />
           <folding>
-            <marker date="1496913138000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
-            <marker date="1496913138000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
-            <marker date="1496913138000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
-            <marker date="1496913138000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
-            <marker date="1496913138000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
-            <marker date="1496913138000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
-            <marker date="1496913138000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
-            <marker date="1496913138000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
-            <marker date="1496913138000" expanded="true" signature="5914:5916" ph="INSERT INTO users... " />
+            <marker date="1496913508000" expanded="true" signature="483:554" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="1317:1371" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="1703:1999" ph="SELECT shoe_... user_shoe" />
+            <marker date="1496913508000" expanded="true" signature="3221:3265" ph="SELECT * FRO... users" />
+            <marker date="1496913508000" expanded="true" signature="3640:3665" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4052:4093" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4052:4094" ph="SELECT * FRO... shoe_brands" />
+            <marker date="1496913508000" expanded="true" signature="4541:4583" ph="SELECT * FRO... shoe_models" />
+            <marker date="1496913508000" expanded="true" signature="5202:5358" ph="INSERT INTO users... " />
+            <marker date="1496913508000" expanded="true" signature="5398:5479" ph="INSERT INTO user_shoe... " />
+            <marker date="1496913508000" expanded="true" signature="5519:5570" ph="SELECT * fro... users" />
+            <marker date="1496913508000" expanded="true" signature="5610:5792" ph="INSERT INTO profile... " />
+            <marker date="1496913508000" expanded="true" signature="5950:5952" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_step1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
