@@ -21,10 +21,10 @@ jQuery('.menu-circle').click(function() {
     jQuery('.cover').click(function () {
         disableMenu();
     });
-});
 
-jQuery('.disableMenu').click(function() {
-    disableMenu();
+    jQuery('.disableMenu').click(function() {
+        disableMenu();
+    });
 });
 
 function disableMenu(){
@@ -32,3 +32,15 @@ function disableMenu(){
     jQuery(".menu-circle").removeClass("active");
     jQuery(".menu-content").removeClass("active");
 }
+
+jQuery('input').on('input', function() {
+    $this = jQuery(this);
+    $label = jQuery('label[for="'+ $this.attr('id') +'"]');
+    if ($label.length > 0 ) {
+        $label.addClass("active");
+    }
+
+    if( !this.value ) {
+        $label.removeClass("active");
+    }
+});

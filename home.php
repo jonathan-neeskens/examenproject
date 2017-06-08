@@ -21,6 +21,7 @@ elseif(checklogin() == true){
 
 <title>Welcome, <?= getName() ?></title>
     <body>
+    <?php include('addrun.php') ?>
     <div class="cover"></div>
 
 <div class="bg-white wide_wrapper">
@@ -69,6 +70,11 @@ elseif(checklogin() == true){
 
 <script>
 
+    jQuery('.cover').click(function () {
+        jQuery(".popup_addrun").removeClass("active");
+        jQuery(".cover").removeClass("active");
+    });
+
     function switchShoe(toShow, toHide) {
         jQuery(toShow).addClass("show");
         jQuery(toHide).removeClass("show");
@@ -81,9 +87,23 @@ elseif(checklogin() == true){
     }
 
     jQuery('.addrun').click(function() {
-        alert('voeg nieuwe run toe');
+        hideMenu();
+
+        jQuery('.popup_addrun').addClass('active');
+        jQuery(".cover").addClass("active");
     });
 
+    function hideMenu(){
+        jQuery(".menu-circle").removeClass("active");
+        jQuery(".menu-content").removeClass("active");
+    }
+
+    function disableCover(){
+        jQuery(".popup_addrun").removeClass("active");
+        jQuery(".cover").removeClass("active");
+
+        hideMenu();
+    }
 
 </script>
 

@@ -147,14 +147,60 @@ div.menu-circle {
     box-shadow: none!important;
     height: 600px;
     width: 600px;
-    border: none!important;
+    //border: none!important;
     background: $white-color!important;
     right: -110px;
     top: -110px;
   }
+
+  &.inactive{
+    height: 75px;
+    width: 75px;
+  }
 }
 
 body {
+  .popup_addrun{
+    display: none;
+    z-index: 200;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid $green-color;
+
+    margin: auto;
+    height: 0px;
+    width: 0px;
+    padding: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: $green-color;
+    text-align: center;
+    transition: all .5s ease;
+
+    &.active{
+      display: block;
+      height: 700px;
+      width: 700px;
+      transition: all .5s ease;
+    }
+
+    i{
+      font-size: 35px;
+
+      &:hover{
+        color: indianred;
+        cursor: pointer;
+      }
+    }
+
+    h2{
+      padding-top: 60px;
+    }
+  }
+
   .logout_button{
     width: auto;
     border: 5px solid $green-color!important;

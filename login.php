@@ -151,18 +151,18 @@ if(isset($_POST['register'])){
         }
 
 
-        jQuery('input').on('input', function() {
-
-            $this = jQuery(this);
-            $label = jQuery('label[for="'+ $this.attr('id') +'"]');
-            if ($label.length > 0 ) {
-                $label.addClass("active");
-            }
-
-            if( !this.value ) {
-                $label.removeClass("active");
-            }
-        });
+//        jQuery('input').on('input', function() {
+//
+//            $this = jQuery(this);
+//            $label = jQuery('label[for="'+ $this.attr('id') +'"]');
+//            if ($label.length > 0 ) {
+//                $label.addClass("active");
+//            }
+//
+//            if( !this.value ) {
+//                $label.removeClass("active");
+//            }
+//        });
 
 //        jQuery('.menu-circle').click(function() {
 //            jQuery(".cover").toggleClass("active");
