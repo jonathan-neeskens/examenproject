@@ -52,6 +52,8 @@ h3 {
     color: #6FCF97; }
   h3.white_color {
     color: #FFFFFF; }
+  h3.no-margin {
+    margin-top: 0px; }
 
 h4 {
   line-height: 20px; }
@@ -99,6 +101,13 @@ div.menu-circle {
 
 body {
   font-family: "Kanit", sans-serif; }
+  body .logout_button {
+    width: auto;
+    border: 5px solid #6FCF97 !important;
+    color: #6FCF97;
+    background: none; }
+    body .logout_button:hover {
+      cursor: pointer; }
   body .label2 {
     position: relative;
     left: -20px !important; }
@@ -226,9 +235,14 @@ body {
       body .menu-content ul a {
         text-decoration: none;
         color: #6FCF97; }
+    body .menu-content .logout_button {
+      display: none;
+      float: right; }
     body .menu-content.active {
       font-size: 40px;
       transition: font-size .5s ease; }
+      body .menu-content.active .logout_button {
+        display: block; }
   body .cover {
     z-index: 190;
     position: fixed;

@@ -24,13 +24,12 @@ elseif(checklogin() == true){
     <div class="cover"></div>
 
 <div class="bg-white wide_wrapper">
-    <?php include ('menu.php') ?>
+    <?php
+    $color = "green_color";
+    include ('menu.php') ?>
     <div class="bit-66">
         <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
-        <h3 class="green_color">We've missed you, hero.</h3>
-        <form method="post">
-            <input type="submit" name="logout" value="log out">
-        </form>
+        <h3 class="green_color no-margin">We've missed you, hero.</h3>
     </div>
     <div class="bit-3"> </div>
 </div>

@@ -158,8 +158,19 @@ function getModelsByBrandID($brandID){
     return $array_result;
 }
 
-//Registreert een gebruiker. Is de laatste stap in het registratieproces. Wordt aangeroepen met een array met persoonlijke gegevens, het Id van het gekozen schoenmodel, en een array met data over de voeten.
+//Registreert een gebruiker. Is de laatste stap in het registratieproces. Wordt aangeroepen met een array met persoonlijke gegevens, het Id van het gekozen schoenmodel, en een array met data over de voeten. Na het registreren start de functie een sessie 'user_id' en stuurt deze door naar de homepagina.
 function registerUser($arrUserData, $modelID, $arrFeetData){
     global $link;
+
+    $today = date("Y-m-d");
+
+    $query_1 = mysqli_query($link, "INSERT INTO users VALUES ('', '$arrUserData[0]', '$arrUserData[1]', '$arrUserData[2]', '$arrUserData[3]', '$arrUserData[6]-$arrUserData[5]-$arrUserData[4]')");
+    $query_2 = mysqli_query($link, "INSERT INTO user_shoe VALUES (LAST_INSERT_ID(), '$modelID', '$today', '100', '0')");
+    $query_4 = mysqli_query($link, "SELECT * from users WHERE userID = LAST_INSERT_ID()");
+    $query_3 = mysqli_query($link, "INSERT INTO profile VALUES ('', LAST_INSERT_ID(), '$arrFeetData[0]', '$arrFeetData[1]', '$arrFeetData[2]', '$arrFeetData[3]', '$arrFeetData[4]', '$arrFeetData[5]', '$arrFeetData[6]')");
+
+    $row = mysqli_fetch_array($query_4);
+    $_SESSION['userID'] = $row['userID'];
+    header('location: home.php');
 
 }

@@ -40,13 +40,7 @@ if(isset($_POST['register_user'])){
         //All fields are filled in.
         $arrFeetData = array($_POST['size'], $_POST['w1'], $_POST['w2'], $_POST['w3'], $_POST['h1'], $_POST['h2'], $_POST['h3']);
 
-        if (register_user($_SESSION['arrUserData'], $_GET['modelID'], $arrFeetData) == true){
-            header('location: home.php');
-        }
-
-        else{
-            $error_msg = "An error occured. Please try again later.";
-        }
+        registerUser($_SESSION['arrUserData'], $_GET['modelID'], $arrFeetData);
     }
 
     else{
@@ -58,7 +52,7 @@ if(isset($_POST['register_user'])){
 <title>Keep Running - <?= $pagetitle ?></title>
 <body class="bg-green">
 <div class="bit-1 bg-green full_height small_wrapper">
-    <form method="POST" action="#">
+    <form method="POST">
         <h2 class="white_color">2. Tell us about your feet. </h2>
         <h3 class="white_color">Enter your size</h3>
         <input type="number" class="w25" name="size">

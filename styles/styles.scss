@@ -82,6 +82,10 @@ h3{
   &.white_color{
     color: $white-color;
   }
+
+  &.no-margin{
+    margin-top: 0px;
+  }
 }
 
 h4{
@@ -151,6 +155,17 @@ div.menu-circle {
 }
 
 body {
+  .logout_button{
+    width: auto;
+    border: 5px solid $green-color!important;
+    color: $green-color;
+    background: none;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
   .label2{
     position: relative;
     left: -20px!important;
@@ -346,11 +361,20 @@ body {
     font-size: 0px;
     font-weight: 700;
 
+    .logout_button{
+      display: none;
+      float: right;
+    }
+
     transition: font-size .5s ease;
 
     &.active{
       font-size: 40px;
       transition: font-size .5s ease;
+
+      .logout_button{
+        display: block;
+      }
     }
   }
 
