@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:200,400,700");
 .full_height {
   height: 100%; }
+  @media screen and (max-width: 450px) {
+    .full_height.bit-3.bg-green:last-child {
+      display: none; } }
 
 html, body {
   height: 100%;
@@ -24,6 +27,15 @@ h1 {
   font-size: 100px;
   line-height: 80px;
   margin-bottom: 45px; }
+  @media screen and (max-width: 1750px) {
+    h1 {
+      font-size: 80px; } }
+  @media screen and (max-width: 1200px) {
+    h1 {
+      font-size: 70px; } }
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 60px; } }
   h1.green_color {
     color: #6FCF97; }
   h1.white_color {
@@ -36,6 +48,15 @@ h2 {
   line-height: 55px;
   margin-bottom: 25px;
   margin-top: 20px; }
+  @media screen and (max-width: 1750px) {
+    h2 {
+      font-size: 60px; } }
+  @media screen and (max-width: 1200px) {
+    h2 {
+      font-size: 50px; } }
+  @media screen and (max-width: 450px) {
+    h2 {
+      font-size: 40px; } }
   h2 b {
     font-weight: 100; }
   h2.green_color {
@@ -79,12 +100,22 @@ div.menu-circle {
   height: 75px;
   width: 75px;
   border-radius: 50%;
+  margin-right: 10%;
+  margin-top: 75px;
   float: right;
   right: 50px;
   top: 50px;
   box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0);
   transition: all .5s ease; }
+  @media screen and (max-width: 1750px) {
+    div.menu-circle {
+      margin-top: 10px;
+      margin-right: 0px; } }
+  @media screen and (max-width: 1200px) {
+    div.menu-circle {
+      height: 50px;
+      width: 50px; } }
   div.menu-circle.green_color {
     border: 5px solid #6FCF97; }
   div.menu-circle.white_color {
@@ -98,16 +129,61 @@ div.menu-circle {
     background: #FFFFFF !important;
     right: -110px;
     top: -110px; }
+    @media screen and (max-width: 450px) {
+      div.menu-circle.active {
+        height: 500px;
+        width: 500px; } }
   div.menu-circle.inactive {
     height: 75px;
     width: 75px; }
 
 body {
   font-family: "Kanit", sans-serif; }
+  body .side_menu {
+    list-style-type: none; }
+    body .side_menu li a {
+      color: #FFFFFF;
+      font-style: normal;
+      font-weight: 100;
+      font-size: 26px;
+      text-transform: uppercase;
+      text-decoration: none; }
+      body .side_menu li a:hover {
+        opacity: 0.8; }
+  body .bit-66 {
+    width: 66.6666%; }
+    body .bit-66.padding-top {
+      padding: 100px; }
+    @media screen and (max-width: 450px) {
+      body .bit-66 {
+        width: 100% !important; } }
+    @media screen and (max-width: 1750px) {
+      body .bit-66 {
+        width: 50%; }
+        body .bit-66.padding-top {
+          padding: 50px !important; } }
+    @media screen and (max-width: 1200px) {
+      body .bit-66.bit-3 {
+        width: 100% !important; } }
+  body .bit-3.padding-top {
+    padding: 100px; }
+  @media screen and (max-width: 1200px) {
+    body .bit-3 {
+      width: 50%; } }
+  @media screen and (max-width: 450px) {
+    body .bit-3 {
+      width: 100% !important; } }
+  body select {
+    border-radius: 0 !important;
+    height: 50px; }
   body .latest-runs {
-    width: 80%;
     max-width: 600px;
     margin-top: 25px !important; }
+    @media screen and (max-width: 450px) {
+      body .latest-runs {
+        width: 100%; }
+        body .latest-runs .bit-4 {
+          width: 50% !important; } }
     body .latest-runs .date {
       background: #3C3C3C;
       text-align: center;
@@ -134,7 +210,6 @@ body {
     body .latest-runs input[type=submit] {
       margin-top: 50px; }
   body .popup_addrun {
-    transition: all .5s ease;
     display: none;
     z-index: 200;
     position: absolute;
@@ -144,18 +219,17 @@ body {
     right: 0;
     border: 5px solid #6FCF97;
     margin: auto;
-    height: 0px;
-    width: 0px;
+    height: 700px;
+    width: 700px;
     padding: 50px;
     border-radius: 50%;
     background-color: #ffffff;
     color: #6FCF97;
-    text-align: center; }
+    text-align: center;
+    transition: all 0.5s ease !important; }
     body .popup_addrun.active {
-      display: block;
-      height: 700px;
-      width: 700px;
-      transition: all .5s ease; }
+      transition: all 0.5s ease !important;
+      display: block; }
     body .popup_addrun i {
       font-size: 35px; }
       body .popup_addrun i:hover {
@@ -172,50 +246,53 @@ body {
       cursor: pointer; }
   body .label2 {
     position: relative;
-    left: -20px !important; }
+    right: 20px !important;
+    top: 2px;
+    background: #FFF;
+    padding: 5px; }
   body .feet {
     margin-bottom: 50px;
     margin-top: 50px;
     max-width: 100%; }
-  body input {
+  body input, body select {
     width: 75%;
     padding: 1em;
     margin: 0.8em;
     margin-left: 0 !important;
     border: none !important;
     text-transform: uppercase; }
-    body input.w25 {
+    body input.w25, body select.w25 {
       width: 25%; }
       @media screen and (max-width: 450px) {
-        body input.w25 {
+        body input.w25, body select.w25 {
           width: 100%; } }
       @media screen and (max-width: 1200px) {
-        body input.w25 {
+        body input.w25, body select.w25 {
           width: 50%; } }
-    body input.w10 {
+    body input.w10, body select.w10 {
       width: 10% !important;
       margin-right: -50px; }
       @media screen and (max-width: 450px) {
-        body input.w10 {
+        body input.w10, body select.w10 {
           width: 100% !important; } }
       @media screen and (max-width: 1200px) {
-        body input.w10 {
+        body input.w10, body select.w10 {
           width: 30% !important; } }
-    body input.button-green {
+    body input.button-green, body select.button-green {
       border: 5px solid #6FCF97 !important;
       background: #FFF;
       color: #6FCF97;
       width: 50%; }
       @media screen and (max-width: 1200px) {
-        body input.button-green {
+        body input.button-green, body select.button-green {
           width: 75% !important; } }
-    body input.button-white {
+    body input.button-white, body select.button-white {
       border: 5px solid #ffffff !important;
       background: #6FCF97;
       color: #FFFFFF;
       width: 50%; }
       @media screen and (max-width: 1200px) {
-        body input.button-white {
+        body input.button-white, body select.button-white {
           width: 75% !important; } }
   body.bg-green {
     background: #6FCF97; }
@@ -276,22 +353,38 @@ body {
     height: 40%;
     width: 100%; }
   body span.error {
-    font-weight: 400;
-    color: indianred;
-    text-transform: uppercase; }
+    color: #FFF;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    background-color: indianred;
+    border-radius: 15px;
+    font-size: 15px; }
   body .menu-content {
     position: fixed;
     top: 50px;
     right: 50px;
     text-align: right;
+    margin-right: 10%;
     color: #6FCF97;
     text-transform: uppercase;
     font-size: 0px;
     font-weight: 700;
     transition: font-size .5s ease; }
+    @media screen and (max-width: 1750px) {
+      body .menu-content {
+        top: 15px;
+        right: 10px;
+        margin-right: 25px; } }
     body .menu-content ul {
       margin-top: 100px;
       list-style-type: none; }
+      @media screen and (max-width: 1750px) {
+        body .menu-content ul {
+          margin-top: 50px; } }
       body .menu-content ul li:hover {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25); }
       body .menu-content ul a {
@@ -303,6 +396,9 @@ body {
     body .menu-content.active {
       font-size: 40px;
       transition: font-size .5s ease; }
+      @media screen and (max-width: 450px) {
+        body .menu-content.active {
+          font-size: 28px; } }
       body .menu-content.active .logout_button {
         display: block; }
   body .cover {
@@ -316,11 +412,11 @@ body {
     transition: all .5s ease; }
     body .cover.active {
       display: block !important; }
-  body input {
+  body input, body select {
     font-size: 16px; }
   body .bg-green {
     background: #6FCF97; }
-    body .bg-green input[type=text], body .bg-green input[type=password], body .bg-green input[type=email], body .bg-green input[type=date], body .bg-green input[type=number] {
+    body .bg-green input[type=text], body .bg-green input[type=password], body .bg-green input[type=email], body .bg-green input[type=date], body .bg-green input[type=number], body .bg-green select {
       background: #FFFFFF;
       color: #6FCF97; }
     body .bg-green label.active {
@@ -333,7 +429,7 @@ body {
     margin-left: 0px; }
   body .bg-white {
     background: #FFFFFF; }
-    body .bg-white input[type=text], body .bg-white input[type=password], body .bg-white input[type=email], body .bg-white input[type=date], body .bg-white input[type=number] {
+    body .bg-white input[type=text], body .bg-white input[type=password], body .bg-white input[type=email], body .bg-white input[type=date], body .bg-white input[type=number], body .bg-white select {
       background: #6FCF97;
       color: #FFFFFF; }
     body .bg-white label.active {
@@ -412,11 +508,16 @@ body {
     padding-top: 75px;
     padding-left: 10%;
     padding-right: 10%; }
+    @media screen and (max-width: 450px) {
+      body .wide_wrapper {
+        padding-top: 10px; } }
     @media screen and (max-width: 1200px) {
       body .wide_wrapper {
         padding-left: 25px !important;
-        padding-right: 25px !important;
-        padding-top: 25px !important; } }
+        padding-right: 25px !important; } }
+    @media screen and (max-width: 1750px) {
+      body .wide_wrapper {
+        padding-top: 25px; } }
   body .small_wrapper {
     padding-top: 100px;
     padding-left: 20%;
@@ -437,6 +538,12 @@ body {
     padding: 3em;
     padding-top: 10%;
     font-size: 20px !important; }
+    @media screen and (max-width: 450px) {
+      body .section {
+        padding: 25px;
+        padding-top: 50px; }
+        body .section input, body .section select {
+          width: 100%; } }
   body input.bit-4 {
     width: 25% !important;
     margin-right: 0 !important;

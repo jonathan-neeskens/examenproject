@@ -2,8 +2,18 @@
 
 include 'head.php';
 
+if(!$_SESSION['arrUserData']){
+    header('location: login.php');
+}
+
+if(checklogin() == true){
+    header('location: home.php');
+}
+
 $pagetitle = "Register";
 $brandID = $_GET['brandID'];
+
+
 
 ?>
 <title>Keep Running - <?= $pagetitle ?></title>

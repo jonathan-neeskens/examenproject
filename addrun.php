@@ -13,7 +13,7 @@
     <div class="popup_addrun bg-white">
         <a onclick="disableCover()"> <i class="fa fa-times"></i></a>
         <h2> Add a new run </h2>
-        <form method="post" action="#">
+        <form method="post">
             <label for="distance">distance in kilometres</label>
             <input type="number" required name="distance" id="distance"><br>
             <label for="percentage">percentage of height difference</label>

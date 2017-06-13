@@ -14,6 +14,7 @@ jQuery(window).focus(function() {
 });
 
 jQuery('.menu-circle').click(function() {
+    // jQuery(".cover").addClass("active");
     jQuery(".cover").addClass("active");
     jQuery(".menu-circle").addClass("active");
     jQuery(".menu-content").addClass("active");

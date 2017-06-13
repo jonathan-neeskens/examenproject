@@ -32,21 +32,13 @@ elseif(checklogin() == true){
         <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
         <h3 class="green_color no-margin">We've missed you, hero.</h3> <br><br>
         <h4 class="green_color"> latest runs</h4>
+        <?php foreach (getRunsByUserID() as $i): ?>
         <div class="latest-runs">
             <div class="bit-4 date">April 11th, 2017</div>
             <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
             <div class="bit-2 wear">0.2 % wear</div>
         </div>
-        <div class="latest-runs">
-            <div class="bit-4 date">April 11th, 2017</div>
-            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
-            <div class="bit-2 wear">0.2 % wear</div>
-        </div>
-        <div class="latest-runs">
-            <div class="bit-4 date">April 11th, 2017</div>
-            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
-            <div class="bit-2 wear">0.2 % wear</div>
-        </div>
+        <?php endforeach; ?>
         <input type="submit" onclick="showPopUp()" class="button-green" value="add new run">
     </div>
     <div class="bit-3"> </div>
@@ -65,20 +57,20 @@ elseif(checklogin() == true){
             <?php endif; ?>
             <br>
             <h2 class="white_color">
-            <b>Your</b> <?= $i[0] ?> <?= $i[1] ?>
+            <b>Your</b> <?= $i[1] ?> <?= $i[2] ?>
             </h2>
             <h4 class="white_color">WEAR</h4>
-            <H5 class="white_color"><?= $i[3] ?>% NEW</H5>
+            <H5 class="white_color"><?= round($i[4], 2) ?>% NEW</H5>
 
             <h4 class="white_color">USED</h4>
-            <H5 class="white_color"> <?= time_elapsed_string($i[4]) ?> </H5>
+            <H5 class="white_color"> <?= time_elapsed_string($i[5]) ?> </H5>
 
             <h4 class="white_color">DISTANCE RAN</h4>
-            <H5 class="white_color"><?= $i[5] ?> KILOMETRES</H5>
+            <H5 class="white_color"><?= $i[6] ?> KILOMETRES</H5>
 
         </div>
         <div class="bit-2 progressbar">
-            <img src="img/models/<?= $i[2] ?>">
+            <img src="img/models/<?= $i[3] ?>">
         </div>
     </div>
 <?php endforeach; ?>

@@ -59,7 +59,7 @@ function getName(){
 function getShoeByUserID($userID){
     global $link;
 
-    $result = mysqli_query($link, "SELECT shoe_brands.name, shoe_models.name, shoe_models.imgURL, user_shoe.status, user_shoe.createDate, user_shoe.distance FROM user_shoe INNER JOIN shoe_models ON user_shoe.modelID = shoe_models.modelID INNER JOIN shoe_brands on shoe_models.brandID = shoe_brands.brandID where user_shoe.userID = $_SESSION[userID]");
+    $result = mysqli_query($link, "SELECT shoe_models.modelID, shoe_brands.name, shoe_models.name, shoe_models.imgURL, user_shoe.status, user_shoe.createDate, user_shoe.distance FROM user_shoe INNER JOIN shoe_models ON user_shoe.modelID = shoe_models.modelID INNER JOIN shoe_brands on shoe_models.brandID = shoe_brands.brandID where user_shoe.userID = $_SESSION[userID]");
     $array_result = array();
     while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
         $array_result[] = $row;
@@ -180,5 +180,70 @@ function registerUser($arrUserData, $modelID, $arrFeetData){
 function addRun($arrData){
     global $link;
 
-    $query_4 = mysqli_query($link, "UPDATE user_shoe DA");
+    $shoeID = getShoeByUserID()[0][0];
+    $query_1 = mysqli_query($link, "SELECT * from user_shoe WHERE modelID = $shoeID");
+    $row = mysqli_fetch_assoc($query_1);
+    $total_percentage = $row['status'] - $arrData[4];
+    $total_distance = $row['distance'] + $arrData[1];
+
+    $query_2 = mysqli_query($link, "UPDATE `user_shoe` SET `status` = '$total_percentage', `distance` = '$total_distance' WHERE `user_shoe`.`modelID` = $shoeID");
+
+    $query_3 = mysqli_query($link, "INSERT into runs VALUES ('', $_SESSION[userID], $arrData[1], $arrData[2], $arrData[3], $arrData[4])");
+}
+
+//Haalt de runs op. Bij deze functie is het mogelijk een aantal op te geven die teruggegeven mo
+function getRunsByUserID($number){
+    global $link;
+
+    $test = array(1, 2, 3);
+    return($test);
+}
+
+//Haalt alle landen op, zonder voorwaarden. Geeft een array met alle landen+IDs terug. wordt aangeroepen op de allereerste stap van het registratieproces.
+function getCountries(){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM app_countries");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
+}
+
+//Haalt alle persoonlijke gegevens van een gebruiker op. Geeft een array met alle persoonlijke gegevens terug. Wordt aangeroepen vanuit de sectie 'Personal' op Profile.php
+function getPersonalDataByUserID(){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM users WHERE userID = $_SESSION[userID]");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
+}
+
+//Haalt het land op aan de hand van het ID. Geeft het land terug.
+function getCountryByID($countryID){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM app_countries WHERE countryID = $countryID");
+    $string_result = mysqli_fetch_assoc($result);
+
+    return($string_result);
+}
+
+//Haalt voetendata op aan de hand van een User ID. Geeft een array met de data terug.
+function getFeetDataByUserID(){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM profile WHERE userID = $_SESSION[userID]");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
 }

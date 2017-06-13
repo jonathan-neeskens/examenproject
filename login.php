@@ -4,6 +4,10 @@ session_start();
 include 'head.php';
 $pagetitle = "Login or Register";
 
+if(checklogin() == true){
+    header('location: home.php');
+}
+
 //Als er op 'Login' gedrukt wordt
 if(isset($_POST['login'])){
     $login_errors = array();
@@ -85,7 +89,7 @@ if(isset($_POST['register'])){
 
 ?>
 <title>Keep Running - <?= $pagetitle ?></title>
-<body>
+<body class="bg-green">
 <div class="cover"></div>
     <div class="bit-3 bg-white full_height section">
         <h1 class="green_color">Login</h1>
@@ -94,29 +98,45 @@ if(isset($_POST['register'])){
             <label for="password"> Password </label><input name="login_password" id="password" type="password">
             <input type="submit" class="button-green" name="login" value="LOGIN">
         </form>
-        <span class="error"> <?= implode("<br> ",$login_errors); ?> </span>
+        <?= implode("<br> ","<span class='error'>".$login_errors."</span>"); ?>
     </div>
-    <div class="bit-3 bg-green full_height section">
+    <div class="bit-66 bg-green full_height section">
+        <div class="bit-2">
         <h1 class="white_color">REGISTER NOW</h1>
         <form method="POST" action="#">
             <label for="email"> Your Email</label><input name="register_username" id="email" type="email"> <br>
             <label for="reg_password">Your password</label> <input name="register_password" id="reg_password" type="password"> <br>
             <label for="name">Your Name</label> <input name="register_name" id="name" type="text"> <br>
-            <label for="country">Your country</label> <input name="register_country" id="country" type="text"> <br>
+            <label for="country" class="active">Your country</label>
+<!--            <input name="register_country" id="country" type="text"> -->
+            <select name="register_country">
+                <option selected disabled>-pick a country-</option>
+                <?php foreach(getCountries() as $country) : ?>
 
+                    <option value="<?= $country[0] ?>"> <?= $country[1] ?> </option>
+
+                <?php endforeach; ?>
+            </select>
+            <br>
             <label for="register_birthday" class="active">Your birthdate</label>
             <input min="1900" max="2017" maxlength="2" id="birthdate" placeholder="Y" class="bit-4" type="number" name="register_year">
             <input min="01" max="12" maxlength="2" placeholder="M"  id="birthdate" class="bit-4" type="number" name="register_month">
             <input min="01" max="31" maxlength="2" placeholder="D" id="birthdate" class="bit-4" type="number" name="register_day">
             <input type="submit" name="register" class="button-white" value="REGISTER NOW">
         </form>
-        <span class="error"> <?= $register_error_message ?> </span>
-    </div>
-    <div class="bit-3 bg-green full_height section" style="padding-top: 50px!important;">
+        </div>
+         <?php
+         if ($register_error_message){
+         echo "<span class='error'>" .$register_error_message. "</span>";
+         }
+         ?>
+
         <?php
         $color = "white_color";
         include ('menu.php');
         ?>
+    </div>
+<!--    <div class="bit-3 bg-green full_height section" style="padding-top: 50px!important;">-->
 <!--        <div class="menu-circle">-->
 <!--            <div class="menu-content">-->
 <!--                <div class="cross-line-1"></div>-->
@@ -128,7 +148,7 @@ if(isset($_POST['register'])){
 <!--                </ul>-->
 <!--            </div>-->
 <!--        </div>-->
-    </div>
+<!--    </div>-->
 
     <div class="onEnter_cover"></div>
 

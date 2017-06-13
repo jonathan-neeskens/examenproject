@@ -2,6 +2,18 @@
 
 include 'head.php';
 
+if(!$_SESSION['arrUserData']){
+    header('location: login.php');
+}
+
+if(!$_GET['modelID']){
+    header('location: register_step1.php');
+}
+
+if(checklogin() == true){
+    header('location: home.php');
+}
+
 $pagetitle = "Register";
 $modelID = $_GET['modelID'];
 
