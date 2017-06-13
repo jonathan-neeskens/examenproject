@@ -95,7 +95,7 @@ if(isset($_POST['register'])){
         <h1 class="green_color">Login</h1>
         <form method="POST" action="#">
             <label for="username"> Username </label><input name="login_username" id="username" type="text"> <br>
-            <label for="password"> Password </label><input name="login_password" id="password" type="password">
+            <label for="password"> Password </label><input name="login_password" id="password" type="password"> <br>
             <input type="submit" class="button-green" name="login" value="LOGIN">
         </form>
         <?= implode("<br> ","<span class='error'>".$login_errors."</span>"); ?>

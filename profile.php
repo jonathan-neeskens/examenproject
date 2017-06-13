@@ -26,7 +26,7 @@ elseif(checklogin() == true){
         <h2 class="white_color"> <?= getName() ?> </h2>
         <ul class="side_menu">
             <li><a href="?section=personal"> Personal </a> </li>
-            <li><a href="?section=security"> Security and Privacy </a> </li>
+            <li><a href="?section=security"> Reset Password </a> </li>
             <li><a href="?section=feet"> Feet </a> </li>
             <li><a href="?section=delete"> Delete account </a> </li>
         </ul>

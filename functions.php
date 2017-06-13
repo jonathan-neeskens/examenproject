@@ -253,5 +253,28 @@ function updateUserData($arrUserData){
     global $link;
 
     $query = mysqli_query($link, "UPDATE `users` SET `mail` = '$arrUserData[0]', `name` = '$arrUserData[1]', `countryID` = '$arrUserData[2]', `birthdate` = '$arrUserData[3]' WHERE `users`.`userID` = $_SESSION[userID]");
+}
+
+//Checkt of wachtwoord dat ingegeven werd bij het reset- proces, ook daadwerkelijk het oude wachtwoord was.
+function checkPasswordByUserID($password){
+    global $link;
+
+    $result = mysqli_query($link, "SELECT * FROM users WHERE userID = '$_SESSION[userID]' AND password = '$password'");
+    $row = mysqli_fetch_array($result);
+    $aantal = mysqli_num_rows($result);
+
+    if ($aantal == 1){
+        return(true);
+    }
+
+    else{
+        return(false);
+    }
+}
+
+function resetPasswordByUserID($password){
+    global $link;
+
+    $query = mysqli_query($link, "UPDATE `users` SET `password` = '$password' WHERE `users`.`userID` = $_SESSION[userID]");
 
 }

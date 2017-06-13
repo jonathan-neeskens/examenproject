@@ -141,6 +141,8 @@ body {
   font-family: "Kanit", sans-serif; }
   body input, body select {
     max-width: 400px; }
+    body input[type=submit], body select[type=submit] {
+      max-width: 300px; }
   body .side_menu {
     list-style-type: none; }
     body .side_menu li a {
