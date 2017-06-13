@@ -32,7 +32,7 @@ elseif(checklogin() == true){
         </ul>
     </div>
 
-    <div class="bit-66 full_height bg-white padding-top">
+    <div class="bit-66 section_3 full_height bg-white padding-top">
         <?php include $_GET['section'].".php" ?>
     </div>
 

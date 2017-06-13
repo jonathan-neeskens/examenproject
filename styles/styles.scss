@@ -222,6 +222,11 @@ div.menu-circle {
 }
 
 body {
+
+  input, select{
+    max-width: 400px;
+  }
+
   .side_menu {
 
     list-style-type: none;
@@ -555,6 +560,19 @@ body {
     padding-right: 15px;
     text-transform: uppercase;
     background-color: indianred;
+    border-radius: 15px;
+    font-size: 15px;
+  }
+
+  span.succes{
+    color: #FFF;
+    font-weight: 100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    background-color: forestgreen;
     border-radius: 15px;
     font-size: 15px;
   }

@@ -247,3 +247,11 @@ function getFeetDataByUserID(){
 
     return $array_result;
 }
+
+//Update de persoonlijke gegevens van een gebruiker. Wordt aangeroepen op profile.php?section=personal
+function updateUserData($arrUserData){
+    global $link;
+
+    $query = mysqli_query($link, "UPDATE `users` SET `mail` = '$arrUserData[0]', `name` = '$arrUserData[1]', `countryID` = '$arrUserData[2]', `birthdate` = '$arrUserData[3]' WHERE `users`.`userID` = $_SESSION[userID]");
+
+}
