@@ -272,9 +272,17 @@ function checkPasswordByUserID($password){
     }
 }
 
+
+//Functie voor het resetten van een gebruikerswachtwoord.
 function resetPasswordByUserID($password){
     global $link;
 
     $query = mysqli_query($link, "UPDATE `users` SET `password` = '$password' WHERE `users`.`userID` = $_SESSION[userID]");
 
+}
+
+function updateFeetByUserID($arrFeetData){
+    global $link;
+
+    $query = mysqli_query($link, "UPDATE `profile` SET `size` = '$arrFeetData[0]', `width_1` = '$arrFeetData[1]', `width_2` = '$arrFeetData[2]', `width_3` = '$arrFeetData[3]', `height_1` = '$arrFeetData[4]', `height_2` = '$arrFeetData[5]', `height_3` = '$arrFeetData[6]' WHERE userID = $_SESSION[userID]");
 }

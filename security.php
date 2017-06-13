@@ -62,10 +62,10 @@ if(isset($_POST['update_password'])){
     ?>
     <form method="POST">
         <label class="" for="oldpassword">old Password</label>
-        <input type="text" name="oldpassword" id="oldpassword"><br><br><br>
+        <input type="password" name="oldpassword" id="oldpassword"><br><br><br>
         <label class="" for="password_1">New Password</label>
-        <input type="text" name="password_1" id="password_1"><br>
+        <input type="password" name="password_1" id="password_1"><br>
         <label class="" for="password_2">Confirm new Password</label>
-        <input type="text" name="password_2" id="password_2"><br>
+        <input type="password" name="password_2" id="password_2"><br>
         <input type="submit" name="update_password" class="button-green" value="Update">
     </form>

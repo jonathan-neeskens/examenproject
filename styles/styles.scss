@@ -15,6 +15,12 @@ $regular_screen: 1750px;
       display: none;
     }
   }
+
+  &.side_menu_section {
+    @media screen and (max-width: $phone_width) {
+        height: 70%!important;
+    }
+  }
 }
 
 html, body {
@@ -255,6 +261,10 @@ body {
 
     &.padding-top{
       padding: 100px;
+
+      @media screen and (max-width: $phone_width) {
+        padding: 50px!important;
+      }
     }
 
       @media screen and (max-width: $phone_width) {

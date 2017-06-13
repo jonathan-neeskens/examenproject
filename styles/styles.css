@@ -4,6 +4,9 @@
   @media screen and (max-width: 450px) {
     .full_height.bit-3.bg-green:last-child {
       display: none; } }
+  @media screen and (max-width: 450px) {
+    .full_height.side_menu_section {
+      height: 70% !important; } }
 
 html, body {
   height: 100%;
@@ -158,6 +161,9 @@ body {
     width: 66.6666%; }
     body .bit-66.padding-top {
       padding: 100px; }
+      @media screen and (max-width: 450px) {
+        body .bit-66.padding-top {
+          padding: 50px !important; } }
     @media screen and (max-width: 450px) {
       body .bit-66 {
         width: 100% !important; } }

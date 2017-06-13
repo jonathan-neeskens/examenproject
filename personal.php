@@ -28,20 +28,10 @@ if(isset($_POST['update_personal_data'])){
 
 
     if($register_errors == 0){
-        //Alle velden zijn ingevuld!
-        //Check of username al bestaat
-        if (checkIfUserExists($_POST['register_username']) == true){
-            //Gebruikersnaam bestaat al! Too bad :(
-            $register_error_message = "Username already exists. Try another username or log in";
-        }
-
-        else{
-            //Gebruikersnaam bestaat nog niet. Ga naar stap 2.
             $arrUserData = array($_POST['mail'], $_POST['name'], $_POST['country'], $_POST['birthdate']);
             updateUserData($arrUserData);
             $success_message = "Details were updated";
         }
-    }
 
     else{
         $error_message = "Please fill in all required fields.";

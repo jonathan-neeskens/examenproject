@@ -20,9 +20,9 @@ elseif(checklogin() == true){
 
 
 
-    <body>
+    <body class="">
 
-    <div class="bit-3 full_height bg-green padding-top align-right" style="position: relative">
+    <div class="bit-3 full_height bg-green padding-top align-right side_menu_section" style="position: relative">
         <h2 class="white_color"> <?= getName() ?> </h2>
         <ul class="side_menu">
             <li><a href="?section=personal"> Personal </a> </li>
