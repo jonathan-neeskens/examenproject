@@ -156,7 +156,7 @@ h5{
 }
 
 div.menu-circle {
-  z-index: 192;
+  z-index: 250!important;
   position: fixed;
   height: 75px;
   width: 75px;
@@ -228,6 +228,12 @@ div.menu-circle {
 }
 
 body {
+  .fixedthing{
+    position: fixed;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+  }
 
   input, select{
     &[type=submit]{
@@ -670,6 +676,10 @@ body {
 
   input, select{
     font-size: 16px;
+
+    &.w30{
+      width: 31.5%;
+    }
   }
 
   .bg-green {

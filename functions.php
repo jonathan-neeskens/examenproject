@@ -50,7 +50,7 @@ function getName(){
     $result = mysqli_query($link, "SELECT * FROM users WHERE userID = '$_SESSION[userID]'");
     $row = mysqli_fetch_array($result);
 
-    $name = $row[2];
+    $name = $row["name"];
     return($name);
 }
 
@@ -188,15 +188,20 @@ function addRun($arrData){
 
     $query_2 = mysqli_query($link, "UPDATE `user_shoe` SET `status` = '$total_percentage', `distance` = '$total_distance' WHERE `user_shoe`.`modelID` = $shoeID");
 
-    $query_3 = mysqli_query($link, "INSERT into runs VALUES ('', $_SESSION[userID], $arrData[1], $arrData[2], $arrData[3], $arrData[4])");
+    $query_3 = mysqli_query($link, "INSERT into runs VALUES ('', $_SESSION[userID], $arrData[1], $arrData[2], $arrData[3], $arrData[4], $arrData[5])");
 }
 
-//Haalt de runs op. Bij deze functie is het mogelijk een aantal op te geven die teruggegeven mo
-function getRunsByUserID($number){
+//Haalt de runs op. Wordt aangeroepen met UserID
+function getRunsByUserID(){
     global $link;
 
-    $test = array(1, 2, 3);
-    return($test);
+    $result = mysqli_query($link, "SELECT * from runs WHERE userID = $_SESSION[userID] ORDER BY runs.runID DESC");
+    $array_result = array();
+    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        $array_result[] = $row;
+    }
+
+    return $array_result;
 }
 
 //Haalt alle landen op, zonder voorwaarden. Geeft een array met alle landen+IDs terug. wordt aangeroepen op de allereerste stap van het registratieproces.

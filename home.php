@@ -13,33 +13,39 @@ if(checklogin() == false){
     header('location: login.php');
 }
 
-elseif(checklogin() == true){
+elseif(checklogin() == true) {
 
 
-?>
+    ?>
 
 
-<title>Welcome, <?= getName() ?></title>
+    <title>Welcome, <?= getName() ?></title>
     <body>
     <?php include('addrun.php') ?>
     <div class="cover"></div>
-
-<div class="bg-white wide_wrapper">
     <?php
     $color = "green_color";
-    include ('menu.php') ?>
+    include('menu.php') ?>
+    <div class="bg-white wide_wrapper fixedthing">
+
     <div class="bit-66">
-        <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
-        <h3 class="green_color no-margin">We've missed you, hero.</h3> <br><br>
-        <h4 class="green_color"> latest runs</h4>
-        <?php foreach (getRunsByUserID() as $i): ?>
+    <h2 class="green_color">Welcome,<b> <?= getName($_SESSION['user_id']) ?> </b></h2>
+    <h3 class="green_color no-margin">We've missed you, hero.</h3> <br><br>
+    <h4 class="green_color"> latest runs</h4>
+    <?php
+    $x = 3;
+
+    while($x >= 1) :
+        $x--;
+    ?>
         <div class="latest-runs">
-            <div class="bit-4 date">April 11th, 2017</div>
-            <div class="bit-4 distance"><b>10K</b> in <b>00:39:21</b></div>
-            <div class="bit-2 wear">0.2 % wear</div>
+            <div class="bit-4 date"><?= getRunsByUserID()[$x][3] ?> % height diff </div>
+            <div class="bit-4 distance"><b><?= getRunsByUserID()[$x][2] ?>K</b> in <b><?= getRunsByUserID()[$x][4] ?> : <?= getRunsByUserID()[$x][5] ?></b></div>
+            <div class="bit-2 wear"><?= round(getRunsByUserID()[$x][6], 2) ?>% wear</div>
         </div>
-        <?php endforeach; ?>
-        <input type="submit" onclick="showPopUp()" class="button-green" value="add new run">
+
+        <?php endwhile; ?>
+        <br><br><br><br><br><br><br><br><input type="submit" onclick="showPopUp()" class="button-green" value="add new run">
     </div>
     <div class="bit-3"> </div>
 </div>

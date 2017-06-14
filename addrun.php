@@ -1,6 +1,6 @@
 <?php
     if (isset($_POST['submit_run'])){
-        $arrData = array($_SESSION['userID'], $_POST['distance'], $_POST['percentage'], $_POST['time'], $_POST['wear']);
+        $arrData = array($_SESSION['userID'], $_POST['distance'], $_POST['percentage'], $_POST['hours'], $_POST['minutes'], $_POST['wear']);
 
         addRun($arrData);
     }
@@ -18,8 +18,11 @@
             <input type="number" required name="distance" id="distance"><br>
             <label for="percentage">percentage of height difference</label>
             <input type="number" class="form-field" required name="percentage" id="percentage"><br>
-            <label for="time">time in hours</label>
-            <input type="number" class="form-field" required name="time" id="time"><br>
+            <label for="hours">Hours</label>
+            <input type="number" class="form-field w30" required name="hours" id="hours">
+            :
+            <label for="minutes">Minutes</label>
+            <input type="number" class="form-field w30" required name="minutes" id="minutes"><br>
             <span>percentage of wear: </span> <span class="wear_percentage">  </span> <br>
             <input type="hidden" class="wear_value" name="wear"><br>
             <input type="submit" class="button-green" name="submit_run" value="Submit your run">

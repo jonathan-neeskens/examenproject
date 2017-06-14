@@ -98,7 +98,7 @@ h5 {
     color: #FFFFFF; }
 
 div.menu-circle {
-  z-index: 192;
+  z-index: 250 !important;
   position: fixed;
   height: 75px;
   width: 75px;
@@ -142,6 +142,11 @@ div.menu-circle {
 
 body {
   font-family: "Kanit", sans-serif; }
+  body .fixedthing {
+    position: fixed;
+    width: 100%;
+    height: 70%;
+    overflow: auto; }
   body input, body select {
     max-width: 400px; }
     body input[type=submit], body select[type=submit] {
@@ -435,6 +440,8 @@ body {
       display: block !important; }
   body input, body select {
     font-size: 16px; }
+    body input.w30, body select.w30 {
+      width: 31.5%; }
   body .bg-green {
     background: #6FCF97; }
     body .bg-green input[type=text], body .bg-green input[type=password], body .bg-green input[type=email], body .bg-green input[type=date], body .bg-green input[type=number], body .bg-green select {
