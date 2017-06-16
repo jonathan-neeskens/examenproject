@@ -183,7 +183,7 @@ function addRun($arrData){
     $shoeID = getShoeByUserID()[0][0];
     $query_1 = mysqli_query($link, "SELECT * from user_shoe WHERE modelID = $shoeID");
     $row = mysqli_fetch_assoc($query_1);
-    $total_percentage = $row['status'] - $arrData[4];
+    $total_percentage = $row['status'] - $arrData[5];
     $total_distance = $row['distance'] + $arrData[1];
 
     $query_2 = mysqli_query($link, "UPDATE `user_shoe` SET `status` = '$total_percentage', `distance` = '$total_distance' WHERE `user_shoe`.`modelID` = $shoeID");

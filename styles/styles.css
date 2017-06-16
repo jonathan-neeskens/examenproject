@@ -142,6 +142,52 @@ div.menu-circle {
 
 body {
   font-family: "Kanit", sans-serif; }
+  body .shopnew {
+    float: right; }
+    @media screen and (max-width: 450px) {
+      body .shopnew {
+        float: left; } }
+  body .event {
+    overflow: hidden;
+    border: 5px solid #6FCF97; }
+    body .event.box_large {
+      height: 250px;
+      max-width: 500px;
+      width: 33.33333%;
+      background: gray;
+      margin-top: 25px;
+      margin-right: 25px;
+      display: inline-block; }
+      @media screen and (max-width: 1200px) {
+        body .event.box_large {
+          width: calc(50% - 30px); } }
+      @media screen and (max-width: 450px) {
+        body .event.box_large {
+          width: 100% !important;
+          margin-right: 0px !important; } }
+      body .event.box_large:hover {
+        opacity: 0.8;
+        cursor: pointer; }
+    body .event span {
+      position: relative;
+      z-index: 5;
+      bottom: 70px;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background: #6FCF97;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: 500; }
+      @media screen and (max-width: 2300px) {
+        body .event span {
+          bottom: 50px; } }
+    body .event img {
+      z-index: 0;
+      min-width: 100%;
+      min-height: 100%;
+      bottom: 0; }
   body .fixedthing {
     position: fixed;
     width: 100%;
@@ -242,6 +288,12 @@ body {
     color: #6FCF97;
     text-align: center;
     transition: all 0.5s ease !important; }
+    @media screen and (max-width: 450px) {
+      body .popup_addrun {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 0px; } }
     body .popup_addrun.active {
       transition: all 0.5s ease !important;
       display: block; }
@@ -362,11 +414,37 @@ body {
     body .shoespace.show {
       z-index: 110; }
     body .shoespace img {
-      max-width: 100%;
-      padding-left: 50px; }
+      max-width: 100%; }
   body .height_40 {
     height: 40%;
-    width: 100%; }
+    width: 100%;
+    padding-top: 25px !important;
+    border-top: 5px solid #fffFFF; }
+    @media screen and (max-width: 450px) {
+      body .height_40 {
+        padding-top: 15px !important; }
+        body .height_40 .bit-2 img {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          left: -20px;
+          z-index: -2;
+          -webkit-filter: grayscale(100%);
+          -moz-filter: grayscale(100%);
+          -ms-filter: grayscale(100%);
+          -o-filter: grayscale(100%);
+          filter: gray;
+          opacity: 0.3; }
+        body .height_40 .hide_mobile {
+          display: none; }
+        body .height_40 h5 {
+          font-size: 20px;
+          line-height: 20px; }
+        body .height_40 h2 {
+          font-size: 26px;
+          line-height: 24px; }
+          body .height_40 h2 b {
+            margin-right: 100%; } }
   body span.error {
     color: #FFF;
     font-weight: 100;
@@ -573,7 +651,7 @@ body {
         body .section input, body .section select {
           width: 100%; } }
   body input.bit-4 {
-    width: 25% !important;
+    width: 17.1% !important;
     margin-right: 0 !important;
     border-right: 4px solid #6FCF97 !important;
     padding: 1em; }
